@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
+  pathPrefix: "/gatsby-cloud",
   siteMetadata: {
     title: `Creative Portfolio`,
   },
