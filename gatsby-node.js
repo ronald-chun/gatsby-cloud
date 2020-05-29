@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -29,3 +30,11 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
+
+exports.onPostBuild = () => {
+  fs.copyFile(`./firebase.json`, `./public/firebase.json`, (err) => {
+    if (err) {
+      throw err;
+    }
+  });
+};
