@@ -45,5 +45,5 @@ jobs:
       
     - name: Deploy
       run: |
-        ls
+        ls -la
         npm run deploy
