@@ -26,9 +26,9 @@ jobs:
       env: # Or as an environment variable
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        echo GT_TOKEN
+        echo $GT_TOKEN
         echo '----'
-        echo process.env.DATO_API_TOKEN
+        echo process.env.GT_TOKEN
         echo '~~~'
 #     # Runs a single command using the runners shell
 #     - name: Run a one-line script
