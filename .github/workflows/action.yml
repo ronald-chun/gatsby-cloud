@@ -39,7 +39,7 @@ jobs:
         
     - uses: fregante/setup-git-token@v1
       with:
-        token: ${{ secrets.GH_PAGES }}  
+        token: ${{ secrets.GITHUB_TOKEN }}  
         
 #     - name: Install GatsbyJS CLI
 #       run: npm install -g gatsby-cli
