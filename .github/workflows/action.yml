@@ -52,6 +52,10 @@ jobs:
     - name: Build
       run: gatsby build --prefix-paths 
       
+    - uses: OleksiyRudenko/gha-git-credentials@v1
+      with:
+        token: '${{ secrets.GH_PAGES }}'
+      
     - name: Deploy
       run: git config --list && gh-pages -d public -r -b gh-pages
 #         npm run deploy
