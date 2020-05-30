@@ -44,8 +44,8 @@ jobs:
 #     - name: Install GatsbyJS CLI
 #       run: npm install -g gatsby-cli
     
-#     - name: Install gh-pages
-#       run: npm install -g gh-pages
+    - name: Install gh-pages
+      run: npm install -g gh-pages
         
 #     - name: Install Dependencies
 #       run: npm install
@@ -59,4 +59,10 @@ jobs:
     - name: Deploy
       env:
         GH_PAGES = ${{ secrets.GH_PAGES }}
-      run: npm run deploy
+#       run: npm run deploy
+      run: |
+        echo $GH_PAGES 
+        echo ${{ GH_PAGES }}
+        echo ${{ secrets.GH_PAGES }}
+        gh-pages -d public -r https://${{ secrets.GH_PAGES }}@github.com/ronald-chun/gatsby-cloud.git
+
