@@ -61,7 +61,6 @@ jobs:
         GH_PAGES = ${{ secrets.GH_PAGES }}
 #       run: npm run deploy
       run: |
-        echo ${{ GH_PAGES }}
         echo ${{ secrets.GH_PAGES }}
         gh-pages -d public -r https://${{ secrets.GH_PAGES }}@github.com/ronald-chun/gatsby-cloud.git
 
