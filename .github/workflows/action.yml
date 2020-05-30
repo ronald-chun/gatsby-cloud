@@ -22,32 +22,40 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: echo Hello, world!
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-        
-    - name: Install GatsbyJS CLI
-      run: npm install -g gatsby-cli
-        
-    - name: Install Dependencies
-      run: npm install
-      
-    - name: Add .env
-      run: echo 'DATO_API_TOKEN=${{ secrets.DATO_API_TOKEN }}' >> .env
-      
-    - name: Deploy
+    - name: Test
       env: # Or as an environment variable
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: 
-        npm run deploy
+      run: |
+        echo GT_TOKEN
+        echo '----'
+        echo process.env.DATO_API_TOKEN
+        echo '~~~'
+#     # Runs a single command using the runners shell
+#     - name: Run a one-line script
+#       run: echo Hello, world!
+
+#     # Runs a set of commands using the runners shell
+#     - name: Run a multi-line script
+#       run: |
+#         echo Add other actions to build,
+#         echo test, and deploy your project.
+
+#     - name: Setup Node
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: '10.x'
+        
+#     - name: Install GatsbyJS CLI
+#       run: npm install -g gatsby-cli
+        
+#     - name: Install Dependencies
+#       run: npm install
+      
+#     - name: Add .env
+#       run: echo 'DATO_API_TOKEN=${{ secrets.DATO_API_TOKEN }}' >> .env
+      
+#     - name: Deploy
+#       env: # Or as an environment variable
+#         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#       run: 
+#         npm run deploy
