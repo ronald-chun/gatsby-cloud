@@ -44,4 +44,6 @@ jobs:
       run: npm install
       
     - name: Deploy
-      run: npm run deploy
+      run: ｜
+        ls
+        npm run deploy
