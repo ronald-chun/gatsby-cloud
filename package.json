@@ -30,7 +30,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "deploy": "rm -rf .cache && gatsby build --prefix-paths && gh-pages-clean && gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/ronald-chun/gatsby-cloud.git"
+    "deploy": "rm -rf .cache && gatsby build --prefix-paths && gh-pages-clean && gh-pages -d public -r https://$GH_TOKEN@github.com/ronald-chun/gatsby-cloud.git"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
