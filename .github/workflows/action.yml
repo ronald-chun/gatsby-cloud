@@ -39,6 +39,9 @@ jobs:
         
     - name: Install GatsbyJS CLI
       run: npm install -g gatsby-cli
+    
+    - name: Install gh-pages
+      run: npm install -g gh-pages
         
     - name: Install Dependencies
       run: npm install
