@@ -37,20 +37,24 @@ jobs:
       with:
         node-version: '10.x'
         
-    - name: Install GatsbyJS CLI
-      run: npm install -g gatsby-cli
-    
-    - name: Install gh-pages
-      run: npm install -g gh-pages
+    - uses: fregante/setup-git-token@v1
+      with:
+        token: ${{ secrets.GH_PAGES }}  
         
-    - name: Install Dependencies
-      run: npm install
+#     - name: Install GatsbyJS CLI
+#       run: npm install -g gatsby-cli
+    
+#     - name: Install gh-pages
+#       run: npm install -g gh-pages
+        
+#     - name: Install Dependencies
+#       run: npm install
       
-    - name: Add .env
-      run: echo 'DATO_API_TOKEN=${{ secrets.DATO_API_TOKEN }}' >> .env
+#     - name: Add .env
+#       run: echo 'DATO_API_TOKEN=${{ secrets.DATO_API_TOKEN }}' >> .env
       
-    - name: Build
-      run: gatsby build --prefix-paths 
+#     - name: Build
+#       run: gatsby build --prefix-paths 
       
     - name: Deploy
       env:
