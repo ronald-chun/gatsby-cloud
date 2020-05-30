@@ -41,8 +41,8 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}  
         
-#     - name: Install GatsbyJS CLI
-#       run: npm install -g gatsby-cli
+    - name: Install GatsbyJS CLI
+      run: npm install -g gatsby-cli
     
     - name: Install gh-pages
       run: npm install -g gh-pages
