@@ -53,5 +53,5 @@ jobs:
       run: gatsby build --prefix-paths 
       
     - name: Deploy
-      run: gh-pages -d public -r https://${{ secrets.GH_TOKEN }}@github.com/ronald-chun/gatsby-cloud.git
+      run: git config --list && gh-pages -d public -r -b gh-pages
 #         npm run deploy
